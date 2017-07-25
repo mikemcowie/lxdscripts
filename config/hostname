@@ -1,0 +1,12 @@
+#!/bin/bash
+apt-get update
+apt-get upgrade
+apt-get install ufw
+systemctl enable ufw
+systemctl start ufw
+ufw allow ssh
+ufw allow http
+ufw allow https
+apt install -y apache2
+systemctl enable apache2
+systemctl start apache2
